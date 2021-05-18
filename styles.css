@@ -1,0 +1,203 @@
+* {
+    margin: 0 0 auto;
+    zoom: 1.05;
+    color: #68717A !important;
+}
+
+body {
+    font: 16px Arial;
+    background-color: #161625 !important;
+    overflow-x: hidden;
+}
+
+#search {
+    border: 1px solid transparent;
+    background-color: #1E1E30;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+/*the container must be positioned relative:*/
+
+.autocomplete {
+    position: relative;
+}
+
+
+/*.column{
+  margin-top: 350px;
+  margin-left: 100px;
+  width: 50%;
+}*/
+
+table {
+    border: none !important;
+    empty-cells: hide !important;
+}
+
+.table th,
+td,
+tbody {
+    background-color: #212130;
+    border-top: none !important;
+    padding: 3px;
+    border: 2px solid #161625;
+}
+
+.sample {
+    display: inline;
+}
+
+.tuple {
+    margin-top: 20px;
+    color: #4C75F2 !important;
+}
+
+td {
+    padding: 15px !important;
+}
+
+.column1 {
+    float: left;
+    padding: 10px;
+}
+
+.column2 {
+    height: 750px;
+    /* Should be removed. Only for demonstration */
+    margin-top: 20px;
+}
+
+.left-box {
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+#update-time {
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.right-box {
+    margin-left: 80px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text] {
+    width: 70%;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 3px 2px #1E1E30;
+    -moz-box-shadow: 0 0 3px 2px #1E1E30;
+    box-shadow: 0 0 3px 2px #1E1E30;
+}
+
+input[type=submit] {
+    background-color: #1E1E30;
+    color: #68717A !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100px;
+    margin-left: 20px;
+    border: none !important;
+    -webkit-box-shadow: 0 0 3px 2px #1E1E30;
+    -moz-box-shadow: 0 0 3px 2px #1E1E30;
+    box-shadow: 0 0 3px 2px #1E1E30;
+    transition: all .15s ease-in-out;
+}
+
+.latest {
+    margin-top: 20px;
+}
+
+.total {
+    width: 100px !important;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #161625;
+    margin-top: 3px;
+    border-bottom: 0.1px solid #535358;
+    width: 70%;
+}
+
+
+/*when hovering an item:*/
+
+.autocomplete-items div:hover {
+    background-color: #1C1C2B;
+}
+
+
+/*when navigating through the items using the arrow keys:*/
+
+.autocomplete-active {
+    background-color: #a6a6a6 !important;
+}
+
+.heading {
+    margin-bottom: 30px;
+    color: #4C75F2 !important;
+}
+
+.tamil-nadu-overall,
+.tamil-nadu-latest,
+.overall,
+.latest {
+    margin-top: 40px;
+}
+
+.para {
+    margin-top: 150px;
+}
+
+.bg-info,
+td {
+    font-size: 12px;
+}
+
+.firstpart {
+    color: #BDBDBD !important;
+}
+
+.secondpart {
+    color: #4C75F2 !important;
+}
+
+.firstpart,
+.secondpart {
+    display: inline-block;
+}
+
+.submit:hover {
+    background-color: #262E55;
+    color: white;
+}
+
+.today {
+    display: inline-block;
+    color: #BDBDBD !important;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=1000" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="icon" href="logo.png" />
+    <title>Coronavirus Outbreak in TamilNadu</title>
+</head>
+
+<body onload="loadData()" style="background-color: black; color: white">
+    <!--Make sure the form has the autocomplete function switched off:-->
+
+    <div class="row">
+        <div class="column1">
+            <div class="left-box">
+                <h2 class="heading">
+                    <p class="firstpart">COVID 19 TRACKER -</p>
+                    <p class="secondpart">TN</p>
+                </h2>
+                <div class="autocomplete" style="width: 500px">
+                    <input id="search" type="text" name="search" placeholder="Enter City Name" onkeyup="myfun()" />
+                    <input type="submit" class="submit" id="submit" />
+                </div>
+                <div class="tuple">
+                    <p style="font-size: 10px">
+                        (Enter City Name in search box to get results at Today - Overall and Today - Latest Count)
+                    </p>
+                    Last Updated Time:
+                    <p id="time" style="display: inline; color: #bdbdbd !important"></p>
+                </div>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="right-box">
+                <div class="tamil-nadu-overall">
+                    <h3>
+                        Tamil Nadu -
+                        <p class="today">Overall</p>
+                    </h3>
+                    <br />
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <tr class="bg-info">
+                                <th>Active</th>
+                                <th>Confirmed</th>
+                                <th>Deceased</th>
+                                <th>Recovered</th>
+                            </tr>
+                            <tbody id="tn-overall-table"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tamil-nadu-latest">
+                    <h3>
+                        Tamil Nadu -
+                        <p class="today">Latest Count</p>
+                    </h3>
+                    <br />
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <tr class="bg-info">
+                                <!-- <th>Active</th> -->
+                                <th>Confirmed</th>
+                                <th>Deceased</th>
+                                <th>Recovered</th>
+                            </tr>
+                            <tbody id="tn-latest-table"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="overall">
+                    <h3>
+                        Today -
+                        <p class="today">Overall</p>
+                    </h3>
+                    <br />
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <tr class="bg-info">
+                                <th>District</th>
+                                <th>Active</th>
+                                <th>Confirmed</th>
+                                <th>Deceased</th>
+                                <th>Recovered</th>
+                            </tr>
+                            <tbody id="overall-table"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="latest">
+                    <h3>
+                        Today -
+                        <p class="today">Latest Count</p>
+                    </h3>
+                    <br />
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <tr class="bg-info">
+                                <th>District</th>
+                                <th>Confirmed</th>
+                                <th>Deceased</th>
+                                <th>Recovered</th>
+                            </tr>
+                            <tbody id="latest-table"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <br />
+                <div class="total-table">
+                    <h3>TamilNadu -
+                        <p class="today">Overall District's Count</p>
+                    </h3>
+                    <br />
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <tr class="bg-info">
+                                <th>District</th>
+                                <th>Active</th>
+                                <th>Confirmed</th>
+                                <th>Deceased</th>
+                                <th>Recovered</th>
+                            </tr>
+                            <tbody id="total-table"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="auto.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
