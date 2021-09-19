@@ -1,30 +1,22 @@
 var button= document.querySelector('.submit');
-const api_url='https://api.covid19india.org/state_district_wise.json';
-const state_url='https://api.covid19india.org/data.json';
+const api_url='https://cors-anywhere.herokuapp.com/https://api.covid19india.org/state_district_wise.json';
+const state_url='https://cors-anywhere.herokuapp.com/https://api.covid19india.org/data.json';
 var search=document.getElementById("search");
 
 button.addEventListener('click', function(){
 		getData(api_url);
-}
-)
+})
 function myfun(search){
 	var search=document.getElementById("search");
 	search.value=search.value[0].toUpperCase()+(search.value).slice(1);
 }
-async function getData(api_url){	
+async function getData(api_url){
 	const response=await fetch(api_url);
 	const data=await response.json();
-	// myJSON = JSON.stringify(data);
-	// localStorage.setItem("testJSON", myJSON);
-
-	// var text = localStorage.getItem("testJSON");
-	// var obj = JSON.parse(text);
-	// console.log(obj['Tamil Nadu']['districtData']);
 	let locarr=data['Tamil Nadu']['districtData'][search.value];
 
 	var table = document.getElementById('overall-table');
 	var table1 = document.getElementById('latest-table');
-	
 
 			var row = `<tr>
 							<td>${search.value}</td>
@@ -43,7 +35,6 @@ async function getData(api_url){
 							<td>${locarr.delta.recovered}</td>
 					  </tr>`
 			table1.innerHTML += row1
-	// console.log(locarr);
 }
 async function loadData(){
 	const response=await fetch(state_url);
@@ -63,17 +54,11 @@ async function loadData(){
 
 
 	var row1 = `<tr>
-							
-							<td>${locarr.deltaconfirmed}</td>
-							<td>${locarr.deltadeaths}</td>
-							<td>${locarr.deltarecovered}</td>
-					  </tr>`
+					<td>${locarr.deltaconfirmed}</td>
+					<td>${locarr.deltadeaths}</td>
+					<td>${locarr.deltarecovered}</td>
+				</tr>`
 			table1.innerHTML += row1
-
-
-
-
-
 
 	const response1=await fetch(api_url);
 	const data1=await response1.json();
@@ -93,8 +78,6 @@ async function loadData(){
 			table2.innerHTML += row2
 
 	}
-	
-
 }
 
 
